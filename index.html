@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduFreelance – Student Freelance Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f9fbfd;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+    nav {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #4e73df;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #1cc88a;
+    }
+    .btn-group a {
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      background-color: #4e73df;
+      transition: background 0.3s ease;
+    }
+    .btn-group a:hover {
+      background-color: #2e59d9;
+    }
+    header {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header p {
+      margin-top: 0.8rem;
+      font-size: 1.2rem;
+      color: #d1f2eb;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #1cc88a;
+      display: block;
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card h3 {
+      color: #4e73df;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .card ul li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .card ul li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: #1cc88a;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      padding: 0.75rem 1.5rem;
+      background: #4e73df;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .contact-form button:hover {
+      background: #2e59d9;
+    }
+    footer {
+      background: #f1f3f6;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.95rem;
+      color: #888;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">EduFreelance</div>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#analytics">Analytics</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="btn-group">
+      <a href="#">Jobs</a>
+      <a href="#">Login</a>
+      <a href="#">Signup</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>EduFreelance</h1>
+    <p>Empowering Students Through Skill-Based Freelancing</p>
+  </header>
+
+  <section id="features">
+    <h2 class="section-title">🎯 Core Features</h2>
+    <div class="features">
+      <div class="card">
+        <h3>🧠 Project Overview</h3>
+        <p>EduFreelance is a dynamic web platform designed for students to offer freelance services, earn real money, and accumulate academic or platform-based credit points. It connects student freelancers with individuals, startups, and organizations looking for affordable, quality work.</p>
+      </div>
+      <div class="card">
+        <h3>🔍 Target Users</h3>
+        <ul>
+          <li>University/college students with marketable skills (design, development, writing, etc.)</li>
+          <li>Academic institutions wanting to promote real-world experience</li>
+          <li>Clients (startups, individuals) seeking cost-effective freelance solutions</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>👨‍🎓 Student Dashboard</h3>
+        <ul>
+          <li>Skill-based profile & portfolio</li>
+          <li>Apply to tasks and manage projects</li>
+          <li>Track credits and earnings</li>
+          <li>Ratings & reviews</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>📢 Client Dashboard</h3>
+        <ul>
+          <li>Post jobs and filter by skills</li>
+          <li>View submissions and manage payments</li>
+          <li>Give feedback and ratings</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🛠 Admin Panel</h3>
+        <ul>
+          <li>Approve users and jobs</li>
+          <li>Resolve disputes</li>
+          <li>Manage credits & fraud detection</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>💰 Payment & Credits</h3>
+        <ul>
+          <li>Dual system: real money + credit points</li>
+          <li>Credits for certifications or perks</li>
+          <li>Stripe / Razorpay Integration</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="key-features">
+    <h2 class="section-title">🚀 EduFreelance: Empowering Students</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem;">A Unique Platform for Student Freelancers</p>
+    <div class="features">
+      <div class="card">
+        <h3>📚 Comprehensive Freelance Platform</h3>
+        <p>EduFreelance connects students with real freelance tasks, enhancing their skills and experience.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Skill Showcase and Portfolio Building</h3>
+        <p>Students can showcase their skills and build a portfolio to attract potential clients and employers.</p>
+      </div>
+      <div class="card">
+        <h3>⭐ Feedback and Recommendations</h3>
+        <p>Users receive ratings and reviews, helping them improve and gain visibility in the freelance market.</p>
+      </div>
+      <div class="card">
+        <h3>🎁 Credit System for Incentives</h3>
+        <p>Earn credits for completed tasks, which can be used for certifications and exclusive perks.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="market-opportunity">
+    <h2 class="section-title">🌍 Exploring the Current Market Opportunity</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem;">Understanding the Timing and Importance of Freelancing</p>
+    <div class="features">
+      <div class="card">
+        <h3>💰 Students Seeking Side-Income</h3>
+        <p>Over 60% of students are looking for additional income sources. This indicates a significant demand from the student population for opportunities to earn money alongside their studies.</p>
+        <div style="height: 20px; background: #4e73df; width: 60%; margin-top: 1rem; border-radius: 10px;"></div>
+      </div>
+      <div class="card">
+        <h3>📈 Freelance Economy Growth</h3>
+        <p>The freelance economy is projected to reach $1.5 trillion by 2030. This demonstrates the substantial and growing economic power of the freelance market.</p>
+        <div style="height: 20px; background: #1cc88a; width: 100%; margin-top: 1rem; border-radius: 10px;"></div>
+      </div>
+      <div class="card">
+        <h3>🎓 Academic Support for Learning</h3>
+        <p>Academic institutions are increasingly promoting experiential learning, suggesting greater openness and encouragement for students to engage in practical, real-world experiences like freelancing.</p>
+        <div style="height: 20px; background: #f39c12; width: 65%; margin-top: 1rem; border-radius: 10px;"></div>
+      </div>
+      <div class="card">
+        <h3>🏢 Company Demand for Flexible Talent</h3>
+        <p>Companies are actively seeking affordable and flexible talent, indicating a demand from the employer side for the skills and flexibility that student freelancers can offer.</p>
+        <div style="height: 20px; background: #e74c3c; width: 70%; margin-top: 1rem; border-radius: 10px;"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="target-audience">
+    <h2 class="section-title">🎯 Understanding Our Target Audience</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem;">Exploring Benefits for Students, Universities, and Clients</p>
+    <div class="features">
+      <div class="card">
+        <h3>🎓 Students: Experience & Income</h3>
+        <p>Students gain valuable experience, earn income, and earn academic credits through engagement with real-world freelance tasks.</p>
+        <div class="icon" style="font-size: 2rem; color: #4e73df;">👩‍🎓👨‍🎓</div>
+      </div>
+      <div class="card">
+        <h3>🏛 Universities: Trackable Engagement</h3>
+        <p>Universities can track skill-based engagement, enhancing student development and aligning with institutional goals for practical experience.</p>
+        <div class="icon" style="font-size: 2rem; color: #f39c12;">🏫</div>
+      </div>
+      <div class="card">
+        <h3>💡 Clients: Fresh Talent & Ideas</h3>
+        <p>Clients benefit from affordable talent who bring innovative ideas and fresh perspectives to projects, helping them grow their business.</p>
+        <div class="icon" style="font-size: 2rem; color: #1cc88a;">💬👥</div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 3rem;">
+      <i class="fas fa-laptop-code fa-3x"></i>
+      <p style="font-size: 1.1rem; color: #2c3e50;">A diverse group of students engaged in a freelance project, embodying the interactive and collaborative nature of EduFreelance.</p>
+    </div>
+  </section>
+  
+  
+  
+
+  <section id="analytics">
+    <h2 class="section-title">📈 Analytics & Expansion</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem;">Track student earnings, job success, and platform activity. Coming soon: AI-based job matching, badge systems for top performers, chat between users, and a dedicated mobile app.</p>
+  </section>
+
+  <!-- <section id="contact">
+    <h2 class="section-title">📬 Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section> -->
+
+  <section id="contact">
+    <h2 class="section-title">📬 Contact Us</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="position: relative; width: 100%; padding-top: 125%;">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSd-f3DZROnTgXJcXeHdXRr4Dku9A7WWjDpqEOuuXVnaJXrA2Q/viewform?embedded=true" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          Loading…
+        </iframe>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    &copy; 2025 EduFreelance. All rights reserved.
+  </footer>
+
+</body>
+</html>
